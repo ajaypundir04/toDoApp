@@ -1,3 +1,4 @@
+
 package com.emirates.todo.controllers;
 
 import java.util.Collection;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.emirates.todo.entity.Tasks;
+import com.emirates.todo.models.Tasks;
 import com.emirates.todo.repositories.TasksRepository;
 
 

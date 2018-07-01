@@ -17,7 +17,7 @@ app.factory('DeleteTasksFactory', function ($resource, $location) {
 });
 
 app.factory('ListTasksFactory', function ($resource, $location) {
-    return $resource(($location.protocol() + "://" + $location.host() + ":" + $location.port()) + '/tasks', {
+    return $resource(($location.protocol() + "://" + $location.host() + ":" + $location.port()) + '/tasks', {}, {
     	query: { method: 'GET', isArray: true }
     })
 });
@@ -28,11 +28,6 @@ app.factory('ListTasksByIdFactory', function ($resource, $location) {
     });
 });
 
-app.factory('TasksPrioritiesListFactory', function ($resource, $location) {
-    return $resource(($location.protocol() + "://" + $location.host() + ":" + $location.port()) + '/populateTasksPriorities', {}, {
-    	query: { method: 'GET', isArray: true }
-    })
-});
 
 app.factory('DataTasksFactory', function(){
 	  var TasksList = [];

@@ -1,29 +1,15 @@
-var app = angular.module('ToDoListApp', ['ngRoute','ngResource','ui.bootstrap', 'ui.bootstrap.datetimepicker']);
+
+var app = angular.module('ToDoListApp', ['ngRoute','ngResource']);
 
 		app.config(function($routeProvider){
 				$routeProvider
-				.when('/',
+				.when('/tasks',
 				{
 					controller: 'ListTasksController',
 					templateUrl: '/views/tasks.html'
-				})
-				.when('/addTask',
-				{
-					controller: 'AddTasksController',
-					templateUrl: '/views/addTasks.html'
-				})
-				.when('/editTask:id',
-				{
-					controller: 'EditTasksController',
-					templateUrl: '/views/editTasks.html'
-				})
-				.when('/completedTasks',
-				{
-					controller: 'ListTasksController',
-					templateUrl: '/views/completedTasks.html'
-				})				
+				})	
 				.otherwise({
-					redirectTo: '/#'
+					redirectTo: '/tasks'
 				})
 
 		});
